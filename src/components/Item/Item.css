@@ -1,0 +1,34 @@
+.cardProducto {
+    background-color: #f5d5cb;
+    width: 250px;
+    padding: 20px;
+    margin: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 20px;
+  }
+  
+  .imagenProducto {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 20px;
+  }
+  
+  .botonProducto {
+    background-color: #ff6b6b;
+    color: #fff;
+    font-size: 24px;
+    border-radius: 20px;
+    padding: 10px 20px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .botonProducto:hover {
+    background-color: #e74c3c;
+    color: #fff;
+  }
+  

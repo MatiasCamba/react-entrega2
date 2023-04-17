@@ -1,0 +1,24 @@
+.contenedorProducto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    max-width: 400px;
+  }
+  
+  .contenedorProducto h3 {
+    font-size: 24px;
+    margin: 10px 0;
+  }
+  
+  .contenedorProducto p {
+    font-size: 18px;
+    margin: 5px 0;
+  }
+  
+  .contenedorProducto img {
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+  }
