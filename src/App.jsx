@@ -25,7 +25,10 @@ function App() {
           
 
           <Route path="/item/:idItem" element={<ItemDetailContainer/>}/>
-        </Routes>
+
+          <Route path="*" element={<h2>EN CONSTRUCCION</h2>}  />
+
+       </Routes>
       </BrowserRouter>
     </>
 
