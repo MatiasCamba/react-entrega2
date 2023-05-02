@@ -4,12 +4,14 @@ import Navbar from "./components/Navbar/Navbar";
 import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
 import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { CarritoProvider } from "./context/CarritoContext";
 
 
 function App() {
   return (
     <>
       <BrowserRouter>
+      <CarritoProvider>
       <Logo/>
      
       <Navbar/>
@@ -29,6 +31,7 @@ function App() {
           <Route path="*" element={<h2>EN CONSTRUCCION</h2>}  />
 
        </Routes>
+       </CarritoProvider>
       </BrowserRouter>
     </>
 
