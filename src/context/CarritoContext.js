@@ -3,10 +3,10 @@ import { useState, createContext } from "react";
 export const CarritoContext = createContext({ carrito: [] });
 
 
-export const CarritoProvider = ( {children} ) => {
+export const CarritoProvider = ({ children }) => {
     const [carrito, setCarrito] = useState([]);
 
-
+    console.log(carrito);
 
     const agregarProducto = (item, cantidad) => {
         if (!estaEnCarrito(item.id)) {
@@ -20,7 +20,7 @@ export const CarritoProvider = ( {children} ) => {
 
 
     const estaEnCarrito = (id) => {
-        return carrito.some(prod => prod.id === id);
+        return carrito.some(prod => prod.item.id === id);
 
 
     }
@@ -35,10 +35,10 @@ export const CarritoProvider = ( {children} ) => {
     }
 
     return (
-        <CarritoContext.Provider value={{carrito, eliminarProducto,vaciarCarrito,agregarProducto}}>
-            
+        <CarritoContext.Provider value={{ carrito, eliminarProducto, vaciarCarrito, agregarProducto }}>
+
             {children}
 
-         </CarritoContext.Provider>
+        </CarritoContext.Provider>
     )
 }
