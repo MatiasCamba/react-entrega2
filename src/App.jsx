@@ -12,29 +12,29 @@ function App() {
   return (
     <>
       <BrowserRouter>
-      <CarritoProvider>
-      <Logo/>
-     
-      <Navbar/>
-        <Routes>
-          
+        <CarritoProvider>
+          <Logo />
 
-          <Route path="/" element={<ItemListContainer/>} />
-          
-          
+          <Navbar />
+          <Routes>
 
-          <Route path="/categoria/:idCategoria" element={<ItemListContainer/>} />
 
-          
+            <Route path="/" element={<ItemListContainer />} />
 
-          <Route path="/item/:idItem" element={<ItemDetailContainer/>}/>
 
-          <Route path="/cart" element={<Cart/>}/>
 
-          <Route path="*" element={<h2>EN CONSTRUCCION</h2>}  />
+            <Route path="/categoria/:idCategoria" element={<ItemListContainer />} />
 
-       </Routes>
-       </CarritoProvider>
+
+
+            <Route path="/item/:idItem" element={<ItemDetailContainer />} />
+
+            <Route path="/cart" element={<Cart />} />
+
+            <Route path="*" element={<h2>EN CONSTRUCCION</h2>} />
+
+          </Routes>
+        </CarritoProvider>
       </BrowserRouter>
     </>
 
