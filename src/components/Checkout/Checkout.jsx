@@ -1,3 +1,4 @@
+import './Checkout.css'
 import { useContext, useState } from 'react'
 import { CarritoContext } from '../../context/CarritoContext'
 import { db } from '../../services/firebase/config'
@@ -53,9 +54,9 @@ const Checkout = () => {
             })
     }
     return (
-        <div>
-            <h3>FINALIZA TU COMPRA</h3>
-            <form onSubmit={handleForm}>
+        <div className='formulario-contenedor'>
+            <h3 className='titulo-formulario'>FINALIZA TU COMPRA</h3>
+            <form className='formulario' onSubmit={handleForm}>
                 {
                     carrito.map((producto) => (
                         <div key={producto.item.id}>
@@ -73,36 +74,36 @@ const Checkout = () => {
 
                 }
                 <hr />
-                <div>
+                <div className='input-contenedor'>
                     <label htmlFor=""> Nombre</label>
                     <input type="text" value={nombre} onChange={(e) => setNombre(e.target.value)} />
 
                 </div>
-                <div>
+                <div className='input-contenedor'>
                     <label htmlFor=""> apellido</label>
                     <input type="text" value={apellido} onChange={(e) => setApellido(e.target.value)} />
                 </div>
-                <div>
+                <div className='input-contenedor'>
                     <label htmlFor=""> Telefono</label>
                     <input type="text" value={telefono} onChange={(e) => setTelefono(e.target.value)} />
                 </div>
-                <div>
+                <div className='input-contenedor'>
                     <label htmlFor=""> email</label>
                     <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
                 </div>
-                <div>
+                <div className='input-contenedor'>
                     <label htmlFor=""> confirma email</label>
                     <input type="email" value={emailConfirmacion} onChange={(e) => setEmailConfirmacion(e.target.value)} />
                 </div>
 
                 {error && <p> {error}</p>}
-                <button type='submit'> Finalizar Compra</button>
+                <button className='boton-formulario' type='submit'> Finalizar Compra</button>
 
 
             </form>
             {
                 ordenId && (
-                    <p> Gracias por tu compra! Tu orden es : {ordenId}</p>
+                    <strong className='formulario-exito'> Gracias por tu compra! Tu orden es : {ordenId}</strong>
                 )
             }
 

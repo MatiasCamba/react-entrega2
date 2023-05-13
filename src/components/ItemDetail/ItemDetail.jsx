@@ -21,10 +21,10 @@ const ItemDetail = ({ nombre, id, precio, img, stock }) => {
 
     return (
         <div className='contenedorProducto'>
-            <h3>{nombre}</h3>
-            <p>Precio: $ {precio}</p>
-            <p>ID:{id}</p>
-            <img src={img} alt={nombre} />
+            <h3 className='titulo-contenedorProducto'>{nombre}</h3>
+            <p className='parrafo-contenedorProducto'>Precio: $ {precio}</p>
+            <p className='parrafo-contenedorProducto'>ID:{id}</p>
+            <img className= 'imagen-contenedorProducto' src={img} alt={nombre} />
 
             {agregarCantidad > 0 ? (<Link to="/cart">Finalizar Compra</Link>) : (<ItemCount inicial={1} stock={stock} onAdd={(manejadorCantidad)} />)}
 

@@ -1,0 +1,24 @@
+.contenedor-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+    width: 200px;
+    height: 200px;
+  }
+  
+  .titulo-item {
+    font-size: 30px;
+    font-weight: bold;
+    margin: 0;
+  }
+  
+  .parrafo-item {
+    font-size: 25px;
+    margin: 0;
+  }
+  

@@ -4,15 +4,15 @@ import CartWidget from '../CartWidget/CartWidget'
 
 export const Navbar = () => {
   return (
-    <header>
+    <header className='header-navbar'>
 
-        <nav>
-            <ul>
-                <li>
+        <nav className='navbar-menu'>
+            <ul className='ul-menu'>
+                <li className='li-menu'>
                  <NavLink to={`/categoria/2`}>Salados</NavLink>
                  
                   </li>
-                <li>
+                <li className='li-menu'>
                 <NavLink to={`/categoria/4`}>Dulces</NavLink>
                 </li>
                
