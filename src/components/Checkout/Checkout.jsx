@@ -2,7 +2,6 @@ import './Checkout.css'
 import { useContext, useState } from 'react'
 import { CarritoContext } from '../../context/CarritoContext'
 import { db } from '../../services/firebase/config'
-import { Link } from 'react-router-dom'
 import { collection, addDoc } from 'firebase/firestore'
 
 const Checkout = () => {

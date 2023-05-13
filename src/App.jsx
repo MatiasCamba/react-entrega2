@@ -1,4 +1,3 @@
-import CartWidget from "./components/CartWidget/CartWidget";
 import Logo from "./components/Logo/Logo";
 import Navbar from "./components/Navbar/Navbar";
 import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
